@@ -8,6 +8,8 @@ import (
 	"github.com/GreetingPackage"
 
 	"log"
+
+	"strings"
 )
 
 func main() {
@@ -25,4 +27,14 @@ func main() {
 	} else {
 		fmt.Println(message)
 	}
+
+	namesInput := GreetingPackage.AskTheName()
+	names := strings.Fields(namesInput)
+	greetings, merr := GreetingPackage.MultipleGreeting(names)
+	if merr != nil {
+		log.Fatal(merr)
+	} else {
+		fmt.Println(greetings)
+	}
+
 }

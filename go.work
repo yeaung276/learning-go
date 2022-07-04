@@ -1,8 +1,9 @@
 go 1.18
 
 use (
-    ./GreetingPackage
-    ./helloworld
+	./GreetingPackage
 	./MultiWorkspace
+	./WebApplication
 	./example
+	./helloworld
 )
